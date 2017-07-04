@@ -1,5 +1,4 @@
-install : true
 language: java
 jdk:
   - oraclejdk8
-script: clean assemble
+script: ./gradlew build -x test

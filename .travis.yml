@@ -2,3 +2,11 @@ language: java
 jdk:
   - oraclejdk8
 script: ./gradlew build -x test
+deploy:
+  provider: releases
+  user: "mgambini1975@gmail.com"
+  password: "arianna8"
+  file: "./build/libs/crowd-integration-plugin-0.0.1.jar"
+  skip_cleanup: true
+  on:
+    tags: true

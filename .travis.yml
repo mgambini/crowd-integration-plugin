@@ -1,12 +1,13 @@
 language: java
 jdk:
-  - oraclejdk8
-script: ./gradlew build -x test
+- oraclejdk8
+script: "./gradlew build -x test"
+notifications:
+  email: true
 deploy:
   provider: releases
-  user: "mgambini1975@gmail.com"
-  password: "arianna8"
-  file: "./build/libs/crowd-integration-plugin-0.0.1.jar"
-  skip_cleanup: true
+  api_key:
+    secure: sL8O6IsU3fgKM5D2cS9Qz6ClyqOjYBfwQPQFjdlR8ONTbnqYWDPxAcAZWx64EPLJnLOnaGmE+KmQDDWV/ALvNNl5P8uDBnKAKItI2P+2difO4ZKl4OGwC5tYqZzsDq3MbtCUhxGZBYVmVL9LaIkbKrG+BTjjYvhLDIMb1THdkK/JBGvC/aQYcvUmUioD7ad9GLfyPvOf39yu8sd9y8zcLnzowzHkYOIPtlsvWABjTqD4TICZeot+0u8EbJPdDypjmOZsTRvJcwsyjPZ0aLDs3np5YbNbYdPivdS9hb/iI87oYMHBeFhZCyvFUhc36RRcsWsoGRz+z7oswRobdXj7vFYhZ9WQkA9I31Gkub3R1C1gjxSdhw4IXbiklyAXAlw8HC+bdkMk1V5X4YZshWaScRfz1+7fCMwzPiCnsKlO4bviaOVtEz9ndAwa5onuvUI9Dl7XX8ObnOhJoR+gqMk7ZeKXunGp+Y//Uvxc2Ch7oz7HXWtbL2wdEonQUpQBF8dbE8iGjCIV+3UPAzCcClcpWrl8LJ1GICRDVLHWrASDR6fy9ddMjxVgA2mZ7z9sEU+/OqF9WXae4qwu1xnAabO7RTPom5qxQnJZJxMmXP9A8digFsJMq8+2HUMe3v13H+BOTMqnFYjGR3sOVWNwsBxFHGoz8vfOgcf6+1ni1IjPz2Q=
+  file: "./build/libs/crowd-integration-plugin-1.0.0.jar"
   on:
-    tags: true
+    repo: mgambini/crowd-integration-plugin
